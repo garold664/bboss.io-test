@@ -337,7 +337,10 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "IBM Plex Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
   position: relative;
   color: #ffffff;
   display: -webkit-box;
@@ -397,6 +400,7 @@ button {
   display: -ms-flexbox;
   display: flex;
   padding-top: 60px;
+  padding-bottom: 20px;
   font-family: "IBM Plex Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -444,3 +448,56 @@ button {
       background-color: rgba(255, 255, 255, 0.3); }
     .header__nav-link--active::before {
       background-color: #ffffff; }
+
+.approach {
+  padding-top: 75px;
+  padding-bottom: 102px;
+  overflow: hidden;
+  background-color: #000000; }
+  .approach__container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .approach__content {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 592px; }
+  .approach__img-block {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    padding-top: 5px; }
+  .approach__img {
+    margin-left: 80px; }
+  .approach__title {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 45px;
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 117px; }
+  .approach__text-wrap {
+    padding-bottom: 44px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+  .approach__subtitle {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px; }
+  .approach__text {
+    margin: 0;
+    padding: 0;
+    padding-top: 42px;
+    font-size: 18px;
+    line-height: 1.6; }
+  .approach__subtext {
+    padding-top: 40px; }
+  .approach__subtext p {
+    margin: 0;
+    padding: 0;
+    padding-top: 36px;
+    font-size: 18px;
+    line-height: 1.6; }
