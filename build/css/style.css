@@ -590,3 +590,98 @@ button {
   .triple__item-text {
     margin: 0;
     padding: 0; }
+
+.request {
+  margin-top: 42px; }
+  .request__container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    width: 1120px;
+    border: 1px solid #00b4f0;
+    border-radius: 7px; }
+  .request__info {
+    position: relative;
+    width: 576px;
+    padding-top: 50px;
+    padding-bottom: 130px;
+    padding-left: 46px;
+    padding-right: 50px;
+    color: #ffffff;
+    background-color: #00b4f0; }
+    .request__info::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 70px;
+      right: 50px;
+      width: 240px;
+      height: 34px;
+      background-image: url("../img/long-arrow.svg"); }
+  .request__icon {
+    margin-left: 10px; }
+  .request__text {
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.5; }
+  .request__small {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6; }
+  .request__form-wrap {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    padding-top: 46px;
+    padding-left: 48px;
+    padding-right: 48px; }
+  .request__title {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 26px; }
+
+.form {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 24px; }
+  .form__label {
+    display: block;
+    padding-bottom: 8px;
+    line-height: inherit;
+    font-weight: 700; }
+  .form__label span {
+    margin-left: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px; }
+  .form__input {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 12px 14px;
+    line-height: inherit;
+    border-radius: 6px;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-width: 1px; }
+  .form__submit {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    line-height: inherit;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #0d870d; }

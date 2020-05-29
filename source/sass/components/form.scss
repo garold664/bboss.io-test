@@ -1,0 +1,43 @@
+.form {
+  font-family: $font-arial;
+  font-size: 16px;
+  line-height: 24px;
+
+  &__label {
+    display: block;
+    padding-bottom: 8px;
+    line-height: inherit;
+    font-weight: 700;
+  }
+
+  &__label span {
+    margin-left: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 12px 14px;
+    line-height: inherit;
+    border-radius: 6px;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+  }
+
+  &__submit {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    line-height: inherit;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #0d870d;
+  }
+}

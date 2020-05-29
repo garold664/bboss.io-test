@@ -1,0 +1,65 @@
+.request {
+  margin-top: 42px;
+  &__container {
+    @include container;
+    display: flex;
+    padding: 0;
+    width: 1120px;
+    border: 1px solid #00b4f0;
+    border-radius: 7px;
+  }
+
+  &__info {
+    position: relative;
+    width: 576px;
+    padding-top: 50px;
+    padding-bottom: 130px;
+    padding-left: 46px;
+    padding-right: 50px;
+    color: #ffffff;
+    background-color: #00b4f0;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 70px;
+      right: 50px;
+      width: 240px;
+      height: 34px;
+      background-image: url("../img/long-arrow.svg");
+    }
+  }
+
+  &__icon {
+    margin-left: 10px;
+  }
+
+  &__text {
+    @include reset;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.5;
+  }
+
+  &__small {
+    @include reset;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  &__form-wrap {
+    flex-shrink: 0;
+    flex-grow: 1;
+    padding-top: 46px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  &__title {
+    @include reset;
+    padding-bottom: 26px;
+  }
+}
