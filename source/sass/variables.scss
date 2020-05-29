@@ -1,0 +1,46 @@
+$mobile-width: 480px;
+$tablet-width: 768px;
+$laptop-width: 1024px;
+$desktop-small: 1350px;
+$desktop-medium: 1600px;
+$desktop-width: 1900px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+//$max-height: 945px;
+$max-height-small: 700px;
+
+$style-change-duration: 0.2s;
+$style-change-function: ease-in-out;
+
+// Шрифты
+$font-ibm: "IBM Plex Sans", "Arial", sans-serif;
+$font-arial: "Arial", "Helvetica", sans-serif;
+
+// Цвета
+$color-orange: #ed8528;
+$color-blue-gradient-start: #4694d2;
+$color-gray-background: #33333d;
+$color-blue: #0075d1;
+$color-light-gray: #e5e5e5;
+$color-gray: #c4c4c4;
+$color-white: #ffffff;
+$color-dark-gray-line: #b6b6b6;
+$color-dark-gray: #464653;
+$color-darknes-gray: #494957;
+$color-dark-gray-background: #2a2a32;
+$color-gray-blue-input: #31313b;
+$color-blue-map-letters: #6b98d3;
+$color-blue-map: #4f78a0;
+$color-blue-map-active: #71ace5;
+$color-light-gray-letters: #afafaf;
+$color-black: #000000;
+$color-gray-webstudio: #9b9ba4;
+$color-box-shadow-input: rgba(0, 17, 31, 0.3);
+$color-gradient-blue: linear-gradient(270deg, #4694d2 0%, #0075d1 100%);
+$color-news-background: #24242b;
+$color-news-hover: #2a3238;
+$color-mobile-background: #363640;
+$color-card-hover: #8c8f94;
+$color-drum-gradient: linear-gradient(90deg, #33363D 0%, #2A2A32 100%), #2A2A32;
+$color-drum-gradient-active: linear-gradient(270deg, #33363D 0%, #2A2A32 100%), #2A2A32;

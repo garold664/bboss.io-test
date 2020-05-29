@@ -1,0 +1,30 @@
+@font-face {
+  font-weight: 400;
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/ibmplexsans-regular.woff2") format("woff2"),
+    url("../fonts/ibmplexsans-regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/ibmplexsans-semibold.woff2") format("woff2"),
+    url("../fonts/ibmplexsans-semibold.woff") format("woff");
+}
+
+
+@font-face {
+  font-weight: 700;
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/ibmplexsans-bold.woff2") format("woff2"),
+    url("../fonts/ibmplexsans-bold.woff") format("woff");
+}
