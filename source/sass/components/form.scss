@@ -26,6 +26,11 @@
     border-radius: 6px;
     border-color: rgba(0, 0, 0, 0.2);
     border-width: 1px;
+
+    &:focus {
+      outline: none;
+      border: 1px solid #86c386;
+    }
   }
 
   &__submit {
