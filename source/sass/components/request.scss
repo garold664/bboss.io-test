@@ -1,5 +1,7 @@
 .request {
   margin-top: 42px;
+  margin-bottom: 80px;
+
   &__container {
     @include container;
     display: flex;

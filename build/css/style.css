@@ -713,6 +713,7 @@ button {
 
 .request {
   margin-top: 42px;
+  margin-bottom: 80px;
 }
 
 .request__container {
@@ -835,4 +836,67 @@ button {
   font-weight: 700;
   color: #ffffff;
   background-color: #0d870d;
+}
+
+.footer {
+  font-size: 16px;
+  line-height: 21px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #000000;
+}
+
+.footer__container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding-top: 80px;
+  padding-bottom: 75px;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 40px;
+}
+
+.footer__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer__nav-item {
+  margin-left: 33px;
+}
+
+.footer__nav-item:first-child {
+  margin-left: 0;
+}
+
+.footer__nav-link {
+  position: relative;
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: color 0.6s ease-in;
+  transition: color 0.6s ease-in;
+}
+
+.footer__nav-link:hover {
+  color: white;
+}
+
+.footer__copyright {
+  margin-left: auto;
+  padding-top: 5px;
 }
