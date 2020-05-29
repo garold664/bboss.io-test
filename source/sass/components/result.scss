@@ -1,0 +1,41 @@
+.result {
+
+  background-color: #e5e5e5;
+  &__container {
+    @include container;
+    display: flex;
+  }
+
+  &__img-block {
+    flex-shrink: 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    margin-left: 129px;
+    // padding-top: 175px;
+  }
+
+  &__title {
+    @include reset;
+    padding-bottom: 28px;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.5;
+  }
+
+  &__text-wrap {
+    padding-bottom: 8px;
+  }
+
+  &__text-wrap p {
+    @include reset;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
