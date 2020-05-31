@@ -1,7 +1,9 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   padding-top: 60px;
-  padding-bottom: 20px;
   font-family: $font-ibm;
   font-weight: 400;
   font-size: 16px;
@@ -13,10 +15,26 @@
     @include container;
     display: flex;
     flex-grow: 1;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &__logo-link {
+    flex-shrink: 0;
     margin-right: auto;
+
+    @include tablet {
+      margin-right: 20px;
+    }
+  }
+
+  &__nav {
+    overflow-x: auto;
+    @include tablet {
+      // max-width: 60%;
+    }
   }
 
   &__nav-list {
@@ -27,6 +45,7 @@
   }
 
   &__nav-item {
+    flex-shrink: 0;
     margin-left: 29px;
   }
 

@@ -4,14 +4,24 @@
   &__container {
     @include container;
     display: flex;
+
+    @include mobile-wide {
+      flex-direction: column;
+    }
   }
 
   &__info {
     flex-shrink: 0;
     width: 260px;
     margin-right: 75px;
+    margin-bottom: 60px;
     font-size: 18px;
     line-height: 1.6;
+
+    @include mobile-wide {
+      width: auto;
+      margin-right: 0;
+    }
   }
 
   &__info p {
@@ -34,6 +44,11 @@
   &__item-icon {
     flex-shrink: 0;
     margin-right: 40px;
+
+    @include tablet {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &__item-title {

@@ -104,7 +104,7 @@
 }
 
 @mixin container {
-  $padding: 15px;
+  $padding: 16px;
   max-width: 1120px + $padding*2;
   margin: 0 auto;
   padding: 0 $padding;
@@ -161,3 +161,4 @@
     opacity: 0.5;
   }
 }
+

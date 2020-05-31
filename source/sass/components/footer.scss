@@ -13,6 +13,10 @@
   &__nav {
     display: flex;
     padding-top: 40px;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__nav-list {
@@ -21,6 +25,12 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    @include tablet {
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-height: 80px;
+    }
   }
 
   &__nav-item {
@@ -28,6 +38,15 @@
 
     &:first-child {
       margin-left: 0;
+    }
+
+    @include tablet {
+      margin-left: 16px;
+      margin-right: 16px;
+
+      &:first-child {
+        margin-left: 16px;
+      }
     }
   }
 
