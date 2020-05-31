@@ -526,6 +526,27 @@ button {
   background-color: #000000;
 }
 
+@media (max-width: 960px) {
+  .approach {
+    background-image: url("../img/approach-bg@1x.png");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: right bottom 15%;
+  }
+}
+
+@media (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 960px) and (min-resolution: 144dpi), (max-width: 960px) and (min-resolution: 1.5dppx) {
+  .approach {
+    background-image: url("../img/approach-bg@2x.png");
+  }
+}
+
+@media (max-width: 700px) {
+  .approach {
+    background-image: none;
+  }
+}
+
 .approach__container {
   max-width: 1150px;
   margin: 0 auto;
@@ -541,14 +562,54 @@ button {
   width: 592px;
 }
 
+@media (max-width: 960px) {
+  .approach__content {
+    width: 100%;
+  }
+}
+
 .approach__img-block {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   padding-top: 5px;
 }
 
+@media (max-width: 1150px) {
+  .approach__img-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 960px) {
+  .approach__img-block {
+    display: none;
+  }
+}
+
 .approach__img {
   margin-left: 80px;
+}
+
+@media (max-width: 1150px) {
+  .approach__img {
+    margin-left: 0;
+    max-width: 100%;
+  }
 }
 
 .approach__title {
@@ -562,7 +623,6 @@ button {
 
 .approach__text-wrap {
   padding-bottom: 44px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .approach__subtitle {
@@ -583,6 +643,19 @@ button {
 
 .approach__subtext {
   padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 960px) {
+  .approach__subtext {
+    width: 60%;
+  }
+}
+
+@media (max-width: 700px) {
+  .approach__subtext {
+    width: 100%;
+  }
 }
 
 .approach__subtext p {
@@ -888,8 +961,8 @@ button {
   font: inherit;
   text-decoration: none;
   color: inherit;
-  -webkit-transition: color 0.6s ease-in;
-  transition: color 0.6s ease-in;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
 }
 
 .footer__nav-link:hover {
