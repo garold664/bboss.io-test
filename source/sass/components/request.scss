@@ -26,16 +26,6 @@
     color: #ffffff;
     background-color: #00b4f0;
 
-    @include tablet {
-      width: 50%;
-    }
-
-    @include mobile-wide {
-      width: auto;
-      max-width: none;
-      border-radius: 7px 7px 0 0;
-    }
-
     &::before {
       content: "";
       display: block;
@@ -45,6 +35,21 @@
       width: 240px;
       height: 34px;
       background-image: url("../img/long-arrow.svg");
+    }
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include mobile-wide {
+      width: auto;
+      max-width: none;
+      padding-bottom: 20px;
+      border-radius: 7px 7px 0 0;
+
+      &::before {
+        content: none;
+      }
     }
   }
 
@@ -59,12 +64,20 @@
     font-weight: 600;
     font-size: 28px;
     line-height: 1.5;
+
+    @include mobile-wide {
+      font-size: 18px;
+    }
   }
 
   &__small {
     @include reset;
     font-size: 18px;
     line-height: 1.6;
+
+    @include mobile-wide {
+      font-size: 14px;
+    }
   }
 
   &__form-wrap {

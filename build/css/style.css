@@ -379,7 +379,6 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
-  position: relative;
   color: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,6 +389,8 @@ body {
           flex-direction: column;
   min-height: 100vh;
   min-width: 320px;
+  position: fixed;
+  overflow: hidden;
 }
 
 *,
@@ -448,9 +449,9 @@ button {
   cursor: pointer;
 }
 
-.menu-opened {
-  position: fixed;
-  overflow: hidden;
+.menu-closed {
+  position: static;
+  overflow: visible;
 }
 
 .header {
@@ -611,19 +612,19 @@ button {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 0;
-    -webkit-transition: width 0.3s ease-in;
-    -o-transition: width 0.3s ease-in;
-    transition: width 0.3s ease-in;
+    width: 100%;
+    -webkit-transition: width 0.3s ease-out;
+    -o-transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out;
     padding-top: 80px;
     overflow: hidden;
     background-color: #000000;
   }
-  .menu-opened .header__nav {
-    width: 100%;
-    -webkit-transition-timing-function: ease-out;
-         -o-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
+  .menu-closed .header__nav {
+    width: 0;
+    -webkit-transition-timing-function: ease-in;
+         -o-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
   }
 }
 
@@ -1094,6 +1095,17 @@ button {
   background-color: #00b4f0;
 }
 
+.request__info::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 70px;
+  right: 50px;
+  width: 240px;
+  height: 34px;
+  background-image: url("../img/long-arrow.svg");
+}
+
 @media (max-width: 960px) {
   .request__info {
     width: 50%;
@@ -1104,19 +1116,12 @@ button {
   .request__info {
     width: auto;
     max-width: none;
+    padding-bottom: 20px;
     border-radius: 7px 7px 0 0;
   }
-}
-
-.request__info::before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 70px;
-  right: 50px;
-  width: 240px;
-  height: 34px;
-  background-image: url("../img/long-arrow.svg");
+  .request__info::before {
+    content: none;
+  }
 }
 
 .request__icon {
@@ -1133,11 +1138,23 @@ button {
   line-height: 1.5;
 }
 
+@media (max-width: 700px) {
+  .request__text {
+    font-size: 18px;
+  }
+}
+
 .request__small {
   margin: 0;
   padding: 0;
   font-size: 18px;
   line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .request__small {
+    font-size: 14px;
+  }
 }
 
 .request__form-wrap {
@@ -1323,7 +1340,7 @@ button {
   padding-top: 5px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 960px) {
   .footer__copyright {
     padding-top: 25px;
   }
