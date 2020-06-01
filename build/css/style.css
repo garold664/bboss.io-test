@@ -1371,6 +1371,10 @@ button {
   }
 }
 
+.nav {
+  overflow-x: auto;
+}
+
 @media (max-width: 550px) {
   .nav {
     display: none;
@@ -1379,7 +1383,6 @@ button {
 
 .nav--mobile {
   display: none;
-  overflow-x: auto;
 }
 
 @media (max-width: 550px) {
