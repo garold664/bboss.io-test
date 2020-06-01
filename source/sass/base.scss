@@ -73,6 +73,28 @@ button {
   cursor: pointer;
 }
 
+.menu-closed.no-js {
+  @include mobile {
+    .header {
+      position: static;
+    }
+
+    .header__container {
+      flex-direction: column;
+    }
+
+    .header__nav {
+      position: static;
+      width: 100%;
+      padding-top: 10px;
+    }
+
+    .header__nav-btn {
+      display: none;
+    }
+  }
+}
+
 .menu-closed {
   position: static;
   overflow: visible;

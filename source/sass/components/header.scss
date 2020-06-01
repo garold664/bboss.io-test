@@ -11,10 +11,6 @@
   color: #ffffff;
   background-color: #000000;
 
-  // .menu-closed & {
-  //   position: fixed;
-  // }
-
   @include mobile {
     padding-top: 10px;
     padding-bottom: 20px;
@@ -29,11 +25,6 @@
     @include tablet {
       width: 100%;
     }
-
-    // @include mobile {
-    //   position: relative;
-    //   z-index: 1500;
-    // }
   }
 
   &__logo-link {
@@ -92,7 +83,7 @@
     margin-bottom: 0;
     border-radius: 2px;
     background-color: #ffffff;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     position: absolute;
     left: 0;
   }
@@ -103,17 +94,13 @@
     }
 
     &::before {
-      width: 141%;
-      left: -19%;
-      top: 42%;
+      top: 50%;
       transform: rotate(45deg);
       transform-origin: center center;
     }
 
     &::after {
-      width: 141%;
-      left: -19%;
-      top: 42%;
+      top: 50%;
       transform: rotate(-45deg);
       transform-origin: center center;
     }
