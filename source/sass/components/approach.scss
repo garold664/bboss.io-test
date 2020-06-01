@@ -20,6 +20,10 @@
     background-image: none;
   }
 
+  @include mobile {
+    // padding-top: 20px;
+  }
+
   &__container {
     @include container;
     display: flex;

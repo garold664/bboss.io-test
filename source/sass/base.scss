@@ -83,8 +83,9 @@ button {
       flex-direction: column;
     }
 
-    .header__nav {
+    .nav {
       position: static;
+      display: block;
       width: 100%;
       padding-top: 10px;
     }
