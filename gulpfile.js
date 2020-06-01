@@ -23,6 +23,9 @@ var concat = require('gulp-concat');
 var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 var newer = require('gulp-newer');
 
+var ghPages = require('gh-pages');
+var path = require('path');
+
 gulp.task('clean', function () {
   return del('build');
 });
@@ -152,3 +155,7 @@ gulp.task('build', gulp.series('clean', 'sprite',
 ));
 
 gulp.task('start', gulp.series('build', 'server'));
+
+gulp.task('deploy', function () {
+  ghPages.publish(path.join(process.cwd(), './build'));
+});
