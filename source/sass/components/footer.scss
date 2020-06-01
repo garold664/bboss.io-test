@@ -8,6 +8,10 @@
     @include container;
     padding-top: 80px;
     padding-bottom: 75px;
+
+    @include mobile {
+      padding-bottom: 50px;
+    }
   }
 
   &__nav {
@@ -30,6 +34,10 @@
       flex-direction: column;
       flex-wrap: wrap;
       max-height: 80px;
+    }
+
+    @include mobile {
+      max-height: none;
     }
   }
 
@@ -68,5 +76,9 @@
   &__copyright {
     margin-left: auto;
     padding-top: 5px;
+
+    @include mobile {
+      padding-top: 25px;
+    }
   }
 }

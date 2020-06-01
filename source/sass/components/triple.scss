@@ -34,11 +34,8 @@
 
   &__item {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     padding-bottom: 40px;
-  }
-
-  &__item-content {
   }
 
   &__item-icon {

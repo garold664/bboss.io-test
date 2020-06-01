@@ -40,7 +40,7 @@
     "start": "gulp start"
   },
   "browserslist": [
-    "last 2 versions",
+    "last 5 versions",
     "IE 11",
     "Firefox ESR"
   ],

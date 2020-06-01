@@ -389,6 +389,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  min-width: 320px;
 }
 
 *,
@@ -447,7 +448,13 @@ button {
   cursor: pointer;
 }
 
+.menu-opened {
+  position: fixed;
+  overflow: hidden;
+}
+
 .header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -461,6 +468,14 @@ button {
   line-height: 21px;
   color: #ffffff;
   background-color: #000000;
+}
+
+@media (max-width: 550px) {
+  .header {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    overflow: hidden;
+  }
 }
 
 .header__container {
@@ -493,8 +508,123 @@ button {
   }
 }
 
+@media (max-width: 550px) {
+  .header__logo-link {
+    position: relative;
+    z-index: 1500;
+  }
+}
+
+.header__nav-btn {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .header__nav-btn {
+    position: relative;
+    z-index: 1500;
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: block;
+    margin-left: auto;
+    outline: none;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    width: 24px;
+    height: 20px;
+  }
+}
+
+.header__nav-btn::before {
+  top: 0;
+}
+
+.header__nav-btn-bar {
+  top: calc(50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.header__nav-btn::after {
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+.header__nav-btn::before, .header__nav-btn::after, .header__nav-btn-bar {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 0;
+  border-radius: 2px;
+  background-color: #ffffff;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  position: absolute;
+  left: 0;
+}
+
+.header__nav-btn--active .header__nav-btn-bar {
+  opacity: 0;
+}
+
+.header__nav-btn--active::before {
+  width: 141%;
+  left: -19%;
+  top: 42%;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.header__nav-btn--active::after {
+  width: 141%;
+  left: -19%;
+  top: 42%;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+}
+
 .header__nav {
   overflow-x: auto;
+}
+
+@media (max-width: 550px) {
+  .header__nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    -webkit-transition: width 0.3s ease-in;
+    -o-transition: width 0.3s ease-in;
+    transition: width 0.3s ease-in;
+    padding-top: 80px;
+    overflow: hidden;
+    background-color: #000000;
+  }
+  .menu-opened .header__nav {
+    width: 100%;
+    -webkit-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+  }
 }
 
 .header__nav-list {
@@ -504,12 +634,33 @@ button {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  background-color: #000000;
+}
+
+@media (max-width: 550px) {
+  .header__nav-list {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .header__nav-item {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-left: 29px;
+}
+
+@media (max-width: 550px) {
+  .header__nav-item {
+    margin-left: 0;
+  }
 }
 
 .header__nav-link {
@@ -540,6 +691,25 @@ button {
   background-color: #ffffff;
 }
 
+@media (max-width: 550px) {
+  .header__nav-link {
+    padding-left: 70px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .header__nav-link::before {
+    top: 50%;
+    left: 20px;
+    right: auto;
+    width: 10px;
+    height: 10px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    border-radius: 50%;
+  }
+}
+
 .approach {
   padding-top: 95px;
   padding-bottom: 102px;
@@ -557,7 +727,7 @@ button {
   }
 }
 
-@media (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 960px) and (min-resolution: 144dpi), (max-width: 960px) and (min-resolution: 1.5dppx) {
+@media (max-width: 960px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 960px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 960px) and (min-resolution: 144dpi), (max-width: 960px) and (min-resolution: 1.5dppx) {
   .approach {
     background-image: url("../img/approach-bg@2x.png");
   }
@@ -641,6 +811,12 @@ button {
   font-weight: 600;
   font-size: 90px;
   line-height: 117px;
+}
+
+@media (max-width: 550px) {
+  .approach__title {
+    font-size: 50px;
+  }
 }
 
 .approach__text-wrap {
@@ -848,7 +1024,7 @@ button {
   display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
   padding-bottom: 40px;
 }
 
@@ -1055,6 +1231,12 @@ button {
   padding-bottom: 75px;
 }
 
+@media (max-width: 550px) {
+  .footer__container {
+    padding-bottom: 50px;
+  }
+}
+
 .footer__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1095,6 +1277,12 @@ button {
   }
 }
 
+@media (max-width: 550px) {
+  .footer__nav-list {
+    max-height: none;
+  }
+}
+
 .footer__nav-item {
   margin-left: 33px;
 }
@@ -1122,6 +1310,7 @@ button {
   text-decoration: none;
   color: inherit;
   -webkit-transition: color 0.3s ease-in;
+  -o-transition: color 0.3s ease-in;
   transition: color 0.3s ease-in;
 }
 
@@ -1132,4 +1321,10 @@ button {
 .footer__copyright {
   margin-left: auto;
   padding-top: 5px;
+}
+
+@media (max-width: 550px) {
+  .footer__copyright {
+    padding-top: 25px;
+  }
 }
